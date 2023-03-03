@@ -7,7 +7,7 @@ export default function App() {
     return (
         <>
             <NavBar />
-            <ItemListContainer greeting='The cart list is still under construction...' />
+            <ItemListContainer greeting='The item list is still under construction...' />
         </>
     )
 }

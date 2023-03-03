@@ -15,11 +15,6 @@ function NavBar() {
             <div className='nav__menu' id='nav__hidden'>
                 <ul className='nav__list'>
                     <li className='nav__item'>
-                        <a href='#home' className='nav__link'>
-                            Home
-                        </a>
-                    </li>
-                    <li className='nav__item'>
                         <a href='#premium' className='nav__link'>
                             Premium
                         </a>

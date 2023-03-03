@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+/* 
+-- Fonts --
+- font-family: 'Lora', serif; Headings & Subtitles, weight: 400, 600
+- font-family: 'Poppins', sans-serif; Body, weight: 400, 500
+
+-- Colors --
+- Dark pink (primary, cta): #EE6141
+- Light pink (secondary): #FFA475
+- Cream (background): #F1EBDF
+- Gray (shadows): #c0bdb9
+- White (body text): #F8F8F8
+- Black (body text, background): #313131
+*/
+
+:root {
+    --dark-pink: #EE6141;
+    --light-pink: #FFA475;
+    --cream: #F1EBDF;
+    --gray: #c0bdb9;
+    --white: #F8F8F8;
+    --black: #313131;
+    --headings: 'Lora', serif;
+    --body: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+    scroll-behavior: smooth;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+    background-color: var(--cream);
+    color: var(--black);
+    font-family: var(--body)
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+    color: var(--black);
+    letter-spacing: 0.03em;
+    font-family: var(--he
+    );
+    font-size: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h3, h4 {
+    font-family: var(--he
+    );
+    letter-spacing: 0.05em;
+}
+
+p {
+    font-size: 0.938rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--dark-pink);
+    transition: color 0.3s;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button, input[type="submit"] {
+    color: var(--white);
+    background-color: var(--dark-pink);
+    border: none;
+    border-radius: 10px;
+    font-family: var(--body);
+    transition: all .1s ease-out;
+    cursor: pointer;
+    font-size: 0.938rem;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: var(--light-pink);
+    color: var(--black);
+    font-weight: 600;
+}
+
+button:focus {
+    outline: solid var(--black) 2px;
+    transform: scale(0.95);
+    background-color: var(--light-pink);
+    color: var(--black);
+    font-weight: 600;
 }

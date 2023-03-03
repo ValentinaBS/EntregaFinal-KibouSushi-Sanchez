@@ -1,0 +1,112 @@
+.nav__container {
+    width: 100%;
+    height: 70px;
+    background-color: var(--cream);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px var(--gray);
+    transition: box-shadow 0.3s, background 0.4s;
+}
+
+.nav__logo {
+    max-width: 140px; 
+    margin-left: 20px;
+}
+
+.nav__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--cream);
+    width: 100%;
+    padding-block: 3.5rem;
+    transition: top 0.4s;
+    box-shadow: 0 0 10px var(--gray);
+}
+
+.nav__list {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+.nav__link {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.nav__toggle__button:hover, .nav__profile__button:hover, .nav__close__button:hover, .cart__widget:hover {
+    color: var(--dark-pink);
+    transition: color 0.3s;
+}
+
+.nav__close__button {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.nav__buttons {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.cart__widget {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.cart__quantity {
+    width: 18px;
+    height: 18px;
+    background-color: var(--white);
+    border-radius: 50%;
+    font-size: 0.7rem;
+    text-align: center;
+    line-height: 1.2rem;
+    margin-left: -20px;
+}
+
+.nav__toggle__button, .nav__profile__button, .nav__cart__button {
+    font-size: 1.6rem;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+#nav__hidden {
+    top: -100%;
+    transition: top 0.4s;
+}
+
+/*Media queries*/
+
+@media screen and (min-width: 768px){
+    #nav__hidden {
+        top: 0;
+    }
+    .nav__menu {
+        position: static;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .nav__list {
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 30px;
+    }
+    .nav__toggle__button, .nav__close__button {
+        display: none;
+    }
+    .cart__widget {
+        margin-right: 15px;
+    }
+}

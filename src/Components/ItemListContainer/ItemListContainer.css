@@ -1,0 +1,94 @@
+.items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.item__title {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.item__subtitle {
+    color: var(--dark-pink);
+    text-align: center;
+}              
+
+.item__cards {
+    background-color: var(--white);
+    max-width: 320px;
+    height: 450px;
+    margin: 0 10px 70px 10px;
+    border-radius: 15px;
+    box-shadow: 0 8px 10px var(--gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item__cards__img {
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
+
+.item__cards__title, .item__cards__ingredients, .item__cards__quantity {
+    padding: 0 28px;
+}
+
+.item__cards__title {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.item__cards__icon {
+    max-width: 25px;
+    font-size: 20px;
+}
+
+.item__cards__ingredients {
+    height: 70px;
+}
+
+.item__cards__quantity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item__cards__price {
+    color: var(--dark-pink);
+}
+
+.item__cards__pieces, .item__cards__stock {
+    font-size: 0.85rem;
+}
+
+.item__cards__button {
+    width: 100%;
+    border-radius: 0 0 8px 8px;
+}
+
+.item__cards__button:focus {
+    transform: none;
+}
+
+.items__loading {
+    height: 400px;
+    padding: 200px 0;
+}
+
+/*Media queries*/
+
+@media screen and (min-width: 768px){
+    .items {
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 20px;
+    }
+}

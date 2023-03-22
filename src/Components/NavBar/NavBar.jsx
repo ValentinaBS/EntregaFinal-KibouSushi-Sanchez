@@ -1,41 +1,58 @@
-import React from 'react';
+import { useState } from 'react';
 import CartWidget from './CartWidget';
 import './NavBar.css';
+import { categories } from '../itemsData';
 import { FaUserAlt, FaTimes, FaBars } from 'react-icons/fa';
+import { Link, NavLink } from 'react-router-dom'
 
 function NavBar() {
+    const [hiddenMenu, setHiddenMenu] = useState(true);
+
     return (
         <nav className='nav__container'>
-            <a href='#home'>
-                <img
-                src='./images/logo-light-nav.png'
-                alt='Kibou logo'
-                className='nav__logo'
-            /></a>
-            <div className='nav__menu' id='nav__hidden'>
+            <Link to='/'>
+                    <img
+                    src='../images/logo-light-nav.png'
+                    alt='Kibou logo'
+                    className='nav__logo'
+                    />
+            </Link>
+            <div className='nav__menu' id={(hiddenMenu ? 'nav__hidden' : '')}>
                 <ul className='nav__list'>
                     <li className='nav__item'>
-                        <a href='#premium' className='nav__link'>
-                            Premium
-                        </a>
+                        <NavLink 
+                            to='/' 
+                            className='nav__link' 
+                        >
+                            All
+                        </NavLink>
                     </li>
-                    <li className='nav__item'>
-                        <a href='#regular' className='nav__link'>
-                            Regular
-                        </a>
-                    </li>
-                    <li className='nav__item'>
-                        <a href='#regular' className='nav__link'>
-                            Vegetarian
-                        </a>
-                    </li>
+                    {   categories.length > 0 
+                    ?   categories.map((category) => (
+                            <li key={category.id} className='nav__item'>
+                                <NavLink 
+                                    to={`/category/${category.name}`} 
+                                    className='nav__link'
+                                >
+                                    {category.name.charAt(0).toUpperCase() + category.name.slice(1)}
+                                </NavLink>
+                            </li>
+                        ))
+                    : <p>Loading...</p>
+                    }
                 </ul>
-                <FaTimes className='nav__close__button' />
+                <FaTimes 
+                    className='nav__close__button' 
+                    onClick={() => setHiddenMenu(!hiddenMenu)} 
+                />
             </div>
             <div className='nav__buttons'>
                 <FaUserAlt className='nav__profile__button' />
                 <CartWidget />
-                <FaBars className='nav__toggle__button' />
+                <FaBars 
+                    className='nav__toggle__button' 
+                    onClick={() => setHiddenMenu(!hiddenMenu)} 
+                />
             </div>
         </nav>
     )

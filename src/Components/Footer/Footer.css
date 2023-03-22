@@ -1,0 +1,130 @@
+.footer {
+    width: 100%;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.footer a {
+    color: var(--white)
+}
+
+.footer a:hover {
+    color: var(--dark-pink);
+    transition: color 0.3s;
+}
+
+.footer__logo {
+    max-width: 150px;
+}
+
+.footer__newsletter {
+    margin: 20px 0;
+}
+
+.footer__newsletter__subtitle {
+    color: var(--light-pink);
+}
+
+.footer__newsletter__title {
+    margin: 5px 0 25px;
+    color: var(--dark-pink)
+}
+
+.footer__form__email {
+    transition: all 0.2s ease-out;
+    color: var(--white);
+    margin-right: 15px;
+    border: none;
+    border-bottom: 1px solid var(--white);
+    background-color: transparent;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.938rem;
+}
+
+.footer__form__email:focus {
+    border: none;
+    outline: solid var(--white) 2px;
+    transform: scale(0.95); 
+}
+
+.footer__form__submit {
+    width: 100px;
+}
+
+.footer__form__submit:focus {
+    outline: solid var(--white) 2px;
+    transform: scale(0.95);
+}
+
+.footer__contact {
+    margin: 35px 0;
+}
+
+.footer__contact__title {
+    margin: 25px 0 10px;
+}
+
+.footer__contact__phone {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.footer__contact__socials {
+    display: flex;
+    column-gap: 25px;
+}
+
+.footer__contact__icon, .footer__contact__social {
+    font-size: 1.6rem;
+}
+
+.footer__legal {
+    border-top: 1px solid var(--white);
+    padding: 10px 10px 0 0;
+}
+
+.footer__legal p {
+    font-size: 0.8rem;
+    margin: 10px 0;
+}
+
+/*Media queries*/
+
+@media screen and (min-width: 768px){
+    .footer__container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 50px 0;
+    }
+
+    .footer__logo {
+        max-width: 170px;
+    }
+
+    .footer__newsletter, .footer__contact {
+        margin: 0;
+    }
+
+    .footer__contact__title {
+        margin-top: 0;
+    }
+
+    .footer__contact__phone {
+        margin-bottom: 20px;
+    }
+
+    .footer__legal__container {
+        display: inline-flex;
+        column-gap: 20px;
+    }
+
+    .footer__legal {
+        display: flex;
+        justify-content: space-between;
+    }
+}

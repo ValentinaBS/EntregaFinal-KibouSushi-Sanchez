@@ -42,14 +42,16 @@ body {
 h1 {
     color: var(--black);
     letter-spacing: 0.03em;
-    font-family: var(--he
-    );
+    font-family: var(--headings);
     font-size: 2rem;
 }
 
+h2 {
+    font-family: var(--headings);
+}
+
 h3, h4 {
-    font-family: var(--he
-    );
+    font-family: var(--headings);
     letter-spacing: 0.05em;
 }
 
@@ -64,6 +66,7 @@ ul {
 a {
     color: var(--black);
     text-decoration: none;
+    line-height: 0;
 }
 
 a:hover {
@@ -85,6 +88,7 @@ button, input[type="submit"] {
     transition: all .1s ease-out;
     cursor: pointer;
     font-size: 0.938rem;
+    padding: 0.7em;
 }
 
 button:hover, input[type="submit"]:hover {
@@ -99,4 +103,14 @@ button:focus {
     background-color: var(--light-pink);
     color: var(--black);
     font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+    button {
+        font-size: 1rem;
+    }
+}
+
+.bold {
+    font-weight: 700;
 }

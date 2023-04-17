@@ -29,13 +29,13 @@ Users should be able to:
 
 ### Screenshot & Navigation
 
-![Desktop View](./Screenshots/desktop-preview.png)
-![Mobile View](./Screenshots/mobile-preview.png)
-![Demo Video](https://youtu.be/8iJcgJm8TrY)
+![Desktop View](./src/Screenshots/desktop-preview.png)
+![Mobile View](./src/Screenshots/mobile-preview.png)
+[Demo Video](https://youtu.be/8iJcgJm8TrY)
 
 ### Live Site
 
-- Live Site URL: [Kibou Sushi](-)
+- Live Site URL: [Kibou Sushi](https://kibou-sushi.vercel.app/)
 
 ## My process
 

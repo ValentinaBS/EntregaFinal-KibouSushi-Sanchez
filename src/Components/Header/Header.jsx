@@ -21,7 +21,7 @@ export default function Header() {
                 <p className='header__description'>
                     Whether you're craving classic California rolls or adventurous Dragon rolls, we have <span className='bold'>something for everyone.</span>
                 </p>
-                <Link to='/category/regular'>
+                <Link to='/all'>
                     <button className='header__button'>
                         Order Now
                         <FaAngleRight className='header__button__icon' />

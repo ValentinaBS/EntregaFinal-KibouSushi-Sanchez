@@ -33,19 +33,13 @@
 }
 
 .footer__form__email {
-    transition: all 0.2s ease-out;
     color: var(--white);
-    margin-right: 15px;
     border: none;
     border-bottom: 1px solid var(--white);
-    background-color: transparent;
-    padding: 10px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.938rem;
+    margin-right: 15px;
 }
 
 .footer__form__email:focus {
-    border: none;
     outline: solid var(--white) 2px;
     transform: scale(0.95); 
 }
@@ -94,7 +88,7 @@
 
 /*Media queries*/
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
     .footer__container {
         display: flex;
         justify-content: space-around;

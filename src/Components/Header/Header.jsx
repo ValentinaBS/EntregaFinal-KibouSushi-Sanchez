@@ -4,10 +4,11 @@ import { FaAngleRight } from 'react-icons/fa';
 
 export default function Header() {
     return (
+        <>
         <header className='header' id='home'>
             <img 
                 className='header__img' 
-                src='../images/sushi-home.png' 
+                src='https://firebasestorage.googleapis.com/v0/b/kibou-sushi-ecommerce.appspot.com/o/sushi-home.png?alt=media&token=7cd19fa0-c504-4ce6-adb5-6e6ab25f42b3' 
                 alt='Sushi plate'
             />
             <section className='header__text'>
@@ -28,5 +29,7 @@ export default function Header() {
                 </Link>
             </section>
         </header>
+        <img className='rice' src='https://firebasestorage.googleapis.com/v0/b/kibou-sushi-ecommerce.appspot.com/o/bg-rice.png?alt=media&token=8d4babf4-aff0-4665-99a7-6882bb693e16' alt='' />
+        </>
     )
 }

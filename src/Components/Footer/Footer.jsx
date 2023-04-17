@@ -1,13 +1,30 @@
 import './Footer.css';
 import { RiWhatsappFill, RiInstagramFill, RiFacebookFill, RiTwitterFill } from 'react-icons/ri';
-import { socials } from '../itemsData'
 
 export default function Footer() {
+    const socials = [
+        {
+            id: 1,
+            name: 'Instagram',
+            link: 'https://www.instagram.com/'
+        },
+        {
+            id: 2,
+            name: 'Facebook',
+            link: 'https://www.facebook.com/'
+        },
+        {
+            id: 3,
+            name: 'Twitter',
+            link: 'https://twitter.com/'
+        }
+    ];
+
     return (
         <footer className='footer' id='contact-us'>
             <div className='footer__container'>
                 <img 
-                    src='../images/logo-dark-title.png' 
+                    src='https://firebasestorage.googleapis.com/v0/b/kibou-sushi-ecommerce.appspot.com/o/logo-dark-title.png?alt=media&token=460bf4be-7b94-403a-ba76-fbc71f726e96' 
                     alt='Kibou logo' 
                     className='footer__logo' 
                 />

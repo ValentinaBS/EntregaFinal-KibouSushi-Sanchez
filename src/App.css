@@ -105,12 +105,75 @@ button:focus {
     font-weight: 600;
 }
 
+button:disabled,
+button[disabled]{
+    background-color: var(--gray);
+    color: var(--black)
+}
+
 @media screen and (min-width: 768px) {
     button {
         font-size: 1rem;
     }
 }
 
+input[type="text"], input[type="email"], input[type="number"] {
+    background: none;
+    box-shadow: none;
+    transition: all 0.2s ease-out;
+    font-family: var(--body);
+    font-size: 0.938rem;
+    padding: 10px;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus {
+    border-radius: 8px;
+}
+
+/* Make the arrows from input type number disappear */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+input[type=number] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
 .bold {
     font-weight: 700;
+}
+
+.loading {
+    animation: pulsate-bck 1.2s ease-in-out infinite both;
+}
+
+@keyframes pulsate-bck {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.rice {
+    position: absolute;
+    opacity: 0.2;
+    z-index: -1;
+    width: 150px;
+    top: 4rem;
+}
+
+@media screen and (min-width: 768px) {
+    .rice {
+        width: 250px;
+        top: 5rem;
+    }
 }

@@ -1,5 +1,5 @@
-import { FaPlus, FaMinus, FaShoppingCart } from 'react-icons/fa'
 import { useState } from 'react'
+import { FaPlus, FaMinus, FaShoppingCart } from 'react-icons/fa'
 
 export default function ItemCount({ stock, onAdd }) {
     const [count, setCount] = useState(1)
@@ -21,6 +21,7 @@ export default function ItemCount({ stock, onAdd }) {
             <button 
             className='detail__units__button'
             onClick={subtract}
+            disabled={count === 1}
             >
                 <FaMinus />
             </button>
@@ -30,12 +31,13 @@ export default function ItemCount({ stock, onAdd }) {
             <button 
             className='detail__units__button'
             onClick={add}
+            disabled={count === stock}
             >
                 <FaPlus />
             </button>
             <button 
                 className='detail__units__button detail__add'
-                onClick={()=> onAdd(count)} disabled={count===0}
+                onClick={() => onAdd(count)} disabled={count < 1}
             >
                 <FaShoppingCart className='detail__cart__icon'/>
                 <span className='detail__button__text'>

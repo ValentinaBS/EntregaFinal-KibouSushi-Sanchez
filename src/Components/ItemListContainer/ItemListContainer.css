@@ -79,8 +79,9 @@
 }
 
 .items__loading {
-    height: 400px;
-    padding: 200px 0;
+    height: 600px;
+    padding: 300px 0;
+    text-align: center;
 }
 
 /*Media queries*/

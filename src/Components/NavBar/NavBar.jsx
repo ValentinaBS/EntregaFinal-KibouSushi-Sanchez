@@ -1,18 +1,22 @@
 import { useState } from 'react';
-import CartWidget from './CartWidget';
 import './NavBar.css';
-import { categories } from '../itemsData';
+import CartWidget from './CartWidget';
 import { FaUserAlt, FaTimes, FaBars } from 'react-icons/fa';
 import { Link, NavLink } from 'react-router-dom'
 
 function NavBar() {
     const [hiddenMenu, setHiddenMenu] = useState(true);
+    const categories = [
+        {id: 1, name: 'regular'}, 
+        {id: 2, name: 'premium'}, 
+        {id: 3, name: 'vegetarian'}
+    ];
 
     return (
         <nav className='nav__container'>
             <Link to='/'>
                     <img
-                    src='../images/logo-light-nav.png'
+                    src='https://firebasestorage.googleapis.com/v0/b/kibou-sushi-ecommerce.appspot.com/o/logo-light-nav.png?alt=media&token=31523b2c-8299-42f4-bebd-604766e34406'
                     alt='Kibou logo'
                     className='nav__logo'
                     />
@@ -21,7 +25,7 @@ function NavBar() {
                 <ul className='nav__list'>
                     <li className='nav__item'>
                         <NavLink 
-                            to='/' 
+                            to='/all' 
                             className='nav__link' 
                         >
                             All
@@ -47,8 +51,12 @@ function NavBar() {
                 />
             </div>
             <div className='nav__buttons'>
-                <FaUserAlt className='nav__profile__button' />
-                <CartWidget />
+                <Link to='/error'>
+                    <FaUserAlt className='nav__profile__button' />
+                </Link>
+                <Link to='/cart'>
+                    <CartWidget />
+                </Link>
                 <FaBars 
                     className='nav__toggle__button' 
                     onClick={() => setHiddenMenu(!hiddenMenu)} 

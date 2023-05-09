@@ -76,14 +76,24 @@
     font-size: 1.6rem;
 }
 
-.footer__legal {
+.footer__credits {
     border-top: 1px solid var(--white);
     padding: 10px 10px 0 0;
 }
 
-.footer__legal p {
+.footer__credits p {
     font-size: 0.8rem;
     margin: 10px 0;
+}
+
+.footer__credits__icon {
+    font-size: 1.6rem;
+}
+
+.footer__credits__github, .footer__credits__linkedin {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
 }
 
 /*Media queries*/
@@ -112,13 +122,20 @@
         margin-bottom: 20px;
     }
 
-    .footer__legal__container {
+    .footer__credits__container {
         display: inline-flex;
         column-gap: 20px;
     }
 
-    .footer__legal {
+    .footer__credits {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 357px) {
+    .footer__form__submit {
+        margin-top: 15px;
     }
 }

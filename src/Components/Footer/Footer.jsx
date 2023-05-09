@@ -1,5 +1,5 @@
 import './Footer.css';
-import { RiWhatsappFill, RiInstagramFill, RiFacebookFill, RiTwitterFill } from 'react-icons/ri';
+import { RiWhatsappFill, RiInstagramFill, RiFacebookFill, RiTwitterFill, RiLinkedinBoxFill, RiGithubFill } from 'react-icons/ri';
 
 export default function Footer() {
     const socials = [
@@ -42,11 +42,9 @@ export default function Footer() {
                             placeholder='email@gmail.com' 
                             className='footer__form__email'
                         />
-                        <input 
-                            type='submit' 
-                            value='Submit' 
-                            className='footer__form__submit' 
-                        /> 
+                        <button type='submit' className='footer__form__submit' >
+                            Submit
+                        </button>
                     </form>
                 </section>
                 <section className='footer__contact'>
@@ -76,19 +74,21 @@ export default function Footer() {
                     </ul>
                 </section>
             </div>
-            <section className='footer__legal'>
-                <p className='footer__legal__copyright'>
+            <section className='footer__credits'>
+                <p className='footer__credits__copyright'>
                     © 2023 Kibou Sushi. All rights reserved.
                 </p>
-                <div className='footer__legal__container'>
-                    <p className='footer__legal__privacy'>
-                        <a href='/'>
-                            Privacy Policy
+                <div className='footer__credits__container'>
+                    <p>
+                        <a href='https://github.com/ValentinaBS' className='footer__credits__github'>
+                            <RiGithubFill className='footer__credits__icon' />
+                            ValentinaBS
                         </a>
                     </p>
-                    <p className='footer__legal__terms'>
-                        <a href='/'>
-                            Terms and Conditions
+                    <p>
+                        <a href='https://www.linkedin.com/in/valentina-belen-sanchez/' className='footer__credits__github'>
+                            <RiLinkedinBoxFill className='footer__credits__icon' />
+                            Valentina Belén Sánchez
                         </a>
                     </p>
                 </div>

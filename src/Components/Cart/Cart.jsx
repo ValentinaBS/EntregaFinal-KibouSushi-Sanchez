@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import './Cart.css';
 import { useCartContext } from '../../Context/CartContext';
 import { FaArrowLeft, FaLeaf, FaTrash, FaBoxOpen, FaAngleRight } from 'react-icons/fa';
@@ -9,7 +9,7 @@ export default function Cart() {
     return (
         <section className='cart'>
             <div className='cart__head'>
-                <Link to='/all'>
+                <Link to={-1}>
                     <FaArrowLeft className='cart__head__back'/>
                 </Link>
                 <h1 className='cart__head__title'>

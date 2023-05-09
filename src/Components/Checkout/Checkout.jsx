@@ -31,10 +31,10 @@ export default function Checkout() {
             id: 2,
             name: 'phone',
             type: 'text',
-            placeholder: '11-3333-4444',
-            errorMessage: "Your phone number must contain 10 numeric digits in format: 00-0000-0000.",
+            placeholder: '000-000-0000',
+            errorMessage: "Your phone number must contain 10 numeric digits in format: 000-000-0000.",
             label: 'Phone',
-            pattern: "[0-9]{2}-[0-9]{4}-[0-9]{4}",
+            pattern: "^(1s?)?((([0-9]{3}))|[0-9]{3})[s-]?[0-9]{3}[s-]?[0-9]{4}$",
             required: true
         },
         {
@@ -44,7 +44,7 @@ export default function Checkout() {
             placeholder: 'email@example.com',
             errorMessage: "Your email address must be in format: email@example.com",
             label: 'Email',
-            pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$",
+            pattern: "[a-zA-Z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$",
             required: true
         },
         {
@@ -71,8 +71,8 @@ export default function Checkout() {
             total: getTotalPrice(),
             date: serverTimestamp()
         }
-        const emailControl = new RegExp("^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$");
-        const phoneControl = new RegExp("^[0-9]{2}-[0-9]{4}-[0-9]{4}$");
+        const emailControl = new RegExp("^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$");
+        const phoneControl = new RegExp("^(1s?)?((([0-9]{3}))|[0-9]{3})[s-]?[0-9]{3}[s-]?[0-9]{4}$");
 
         if(user.fullName.length <= 5 || !phoneControl.test(user.phone) || user.email !== user.emailRepeat || !emailControl.test(user.email) || cartList.length === 0) {
             return false

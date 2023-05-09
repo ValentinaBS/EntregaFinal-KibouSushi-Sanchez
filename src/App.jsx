@@ -20,11 +20,11 @@ export default function App() {
                     <Route path='/' exact element={<><Header /> <ItemListContainer /></>} />
                     <Route path='/*' exact element={<Error />} />
                     <Route path='/all' exact element={<ItemListContainer />} />
-                    <Route path="/category/:categoryId" exact element={<ItemListContainer/>} />
-                    <Route path="/item/:itemId" exact element={<ItemDetailContainer/>} />
+                    <Route path='/category/:categoryId' exact element={<ItemListContainer/>} />
+                    <Route path='/item/:itemId' exact element={<ItemDetailContainer/>} />
                     <Route path='/cart' exact element={<Cart />} />
                     <Route path='/checkout' exact element={<Checkout />} />
-                    <Route path={"/order/:orderId"} element={<OrderSuccess />} /> 
+                    <Route path={'/order/:orderId'} element={<OrderSuccess />} /> 
                 </Routes>
                 <Footer />
             </BrowserRouter>

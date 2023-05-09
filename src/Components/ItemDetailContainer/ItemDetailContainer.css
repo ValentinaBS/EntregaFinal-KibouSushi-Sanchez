@@ -135,6 +135,17 @@
     padding: 0 20%;
 }
 
+.detail__warning {
+    margin-top: 100px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 50px;
+    text-align: center;
+    padding: 0 30px;
+}
+
 /* Media Queries */
 
 @media screen and (min-width: 768px) {
